@@ -1,0 +1,105 @@
+#File:    design2.txt
+#Author:  Innocent Kironji
+#Date:    04/13/2017
+#Section: CMSC201-22
+#E-mail:  wambugu1@umbc.edu
+#Description:
+#    This is the design/ psuedocode for Project 2. The purpose of this file
+#    is to highlight the main portions of the digital vending machine I
+#    will be making for the project
+
+#Constants
+MENU = #stores string that contains the menu
+WELCOME_MSG = #stores string for welcome message
+#Choices
+DISPLAY_MACHINE = 1
+SELECTION = 2
+DISPLAY_BALANCE = 3
+ADD_MONEY = 4
+QUIT = 5
+#Prompts
+CHOICE_PROMPT = #string asking user to make a choice
+BALANCE_PROMPT = #string asking user to enter an amount of money to add to
+                 # their account
+SELECTION_PROMPT = #string asking user to pick an item from the vending
+		   #machine
+MACHINE_PROMPT = #string asking user what .txt file to use for the machine's
+	         #contents
+
+#Functions
+
+#show_display()  displays items in vending machine
+#Input:          vending_machine; this is a .txt file that has information
+#                 on the items in the machine
+#Output:         none; this funtion only prints
+def show_display(vending_machine):
+    #Open the file for the vending_machine the user specified
+    #Using strip() and split() set values for the variables candy, price,
+    # quantity and code
+    #If quantity is greater than 0
+    	#print out a display containing candy, price and code
+
+#make_selection() allows the user to purchase a candy if they have enough
+#                  money and then updates the vending_machine file
+#Input:           vending_machine; a string that contains the name of the
+#                                  file that will be used for the contents
+#                                  of the machine
+#                 balance; a float variable for the user's card balance
+#Output:          new_balance; a float variable for updated card balance
+#                              after purchases have been accounted for
+def make_selection(balance):
+    #Open vending_machine and assign its variables to lists depending on
+    # if they are the candy, the price or the candy code.
+    #Allow the user to input a candy code and check if it's valid 
+    # (use boolean)
+    #Save the position of the choice the user made if it's valid and refer
+    # to the candy the code goes with
+    #Remove 1 quantity from that candy
+    #Update the user's card balance
+    #Tell the user their new card balance and some info
+
+#add_balance()  allows user to add money to their existing balance as long
+#                as they are adding a positive number
+#Input:         balance; a float that contains user's card balance
+#Output:        new_balance; a float with the user's updated card balance
+def set_balance(balance):
+    #Asks user for input on how much money they want to add
+    #Reprompts the user if the amount is invalid (invalid if less than zero)
+    #Adds the new amount and exisiting balance and returns it as new_balance
+
+
+#check_balance()  displays user's card balance and accounts for any changes 
+#                  made in recent purchases
+#Input:           balance; a float that contains user's card balance
+#		  reduction; a float that contains the change in balance due
+#                            to purchase
+#Output:          current_balance; a float that contains the updated card
+#                                  balance
+def check_balance(balance):
+    #Print balance with a message
+    #Subtracts balance and reduction to return current balance
+
+#choice_runner() uses the user response to figure out what function to run
+#Input:          choice; a integer that is the user's choice for what mode
+#                        of the vending machine to use
+#                vending_machine; a string variable that contains the name
+#                                 of the file used to distinguish contents
+#                                 of the vending machine
+#                balance; a float that holds the user's card balance
+#Output:         new_balance; a float that updates card balance
+def choice_runner(choice, vending_machine, balance):
+    #If and ifelse statements that go with each of the first 4 choices
+    # the user can make
+    #One of the four functions before this one is called based on the choice
+    #made
+    #updates new_balance based on the function run
+
+def main():
+    
+    #Displays various messages and the menu
+    #Run a loop to allow the user to run through the menu repeatedly
+    #until they decide to quit
+    #Allow the user to make a choice and if it is any choice other than
+    #quit then choice_runner() is called 
+
+main()
